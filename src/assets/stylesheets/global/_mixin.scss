@@ -1,0 +1,45 @@
+@use './variable' as v;
+@use './functions' as f;
+
+// ブレイクポイント
+@mixin mediaQueries($point) {
+  @media #{map-get(v.$mediaQueries, $point)} {
+    @content;
+  }
+}
+@mixin is-mobileOnly {
+  @media #{map-get(v.$mediaQueries, 'mobileOnly')} {
+    @content;
+  }
+}
+@mixin is-tablet {
+  @media #{map-get(v.$mediaQueries, 'tablet')} {
+    @content;
+  }
+}
+@mixin is-tabletOnly {
+  @media #{map-get(v.$mediaQueries, 'tabletOnly')} {
+    @content;
+  }
+}
+@mixin is-tabletDown {
+  @media #{map-get(v.$mediaQueries, 'tabletDown')} {
+    @content;
+  }
+}
+@mixin is-pc {
+  @media #{map-get(v.$mediaQueries, 'pc')} {
+    @content;
+  }
+}
+@mixin is-pcMax {
+  @media #{map-get(v.$mediaQueries, 'pcMax')} {
+    @content;
+  }
+}
+
+// 親要素より大きく
+@mixin beyondParents {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}

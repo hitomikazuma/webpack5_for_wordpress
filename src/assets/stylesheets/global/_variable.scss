@@ -1,0 +1,43 @@
+// カラー設定
+$defaultFontColor: #332618;
+$baseColor: #332618;
+$accentColor: #F2AE5D;
+$subColor: #B2491A;
+$bgColor: #CCC1B5;
+
+// フォント設定
+$xLargeFontSize: 2rem;
+$largeFontSize: 1.8rem;
+$mediumFontSize: 1.6rem;
+$smallFontSize: 1.4rem;
+$xSmallFontSize: 1.2rem;
+$minimumFontSize: 1rem;
+
+// letter-spacing
+$wideLetterSpacing: .15em;
+
+// line-height
+$clearLineHeight: 1;
+$smallLineHeight: 1.4;
+$mediumLineHeight: 1.6;
+$largeLineHeight: 1.8;
+$xLargeLineHeight: 2;
+
+// transition
+$defaultTransition: all .3s ease-out;
+
+// easing
+$easing1: cubic-bezier(0.19, 1, 0.22, 1);
+$easing2: cubic-bezier(.55, 0, .1, 1);
+
+//@media
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1023px;
+$mediaQueries: (
+  "mobileOnly": "screen and (max-width: "$breakpoint-mobile")",
+  "tablet": "screen and (min-width: "$breakpoint-mobile + 1")",
+  "tabletOnly": "screen and (min-width: "$breakpoint-mobile + 1") and (max-width: "$breakpoint-tablet")",
+  "tabletDown": "screen and (max-width: "$breakpoint-tablet")",
+  "pc": "screen and (min-width: "$breakpoint-tablet + 1")",
+  "pcMax": "screen and (min-width: 1280px)",
+);
